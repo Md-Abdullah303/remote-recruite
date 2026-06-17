@@ -1,66 +1,69 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
-import img from "../../assets/Bottom Elipses.png";
 
 const BannerSection = () => {
-  // GSAP এর জন্য reference তৈরি করা হলো
-  const bannerRef = useRef(null);
+  const containerRef = useRef(null);
   const h1Ref = useRef(null);
   const pRef = useRef(null);
+  const shapesRef = useRef(null);
 
   useEffect(() => {
-    // একটি timeline তৈরি করা হলো যাতে একটার পর আরেকটা অ্যানিমেশন হয়
     const tl = gsap.timeline();
 
-    // H1 এর অ্যানিমেশন
+    // টেক্সট ও ব্যাকগ্রাউন্ড শেপগুলোর একসাথেই এন্ট্রি অ্যানিমেশন
     tl.fromTo(
-      h1Ref.current,
-      { opacity: 0, y: 50 },
-      { opacity: 1, y: 0, duration: 1, ease: "power3.out" },
+      shapesRef.current.children,
+      { opacity: 0, scale: 0.8 },
+      { opacity: 1, scale: 1, duration: 1.5, ease: "power2.out", stagger: 0.2 },
     );
 
-    // Paragraph এর অ্যানিমেশন (H1 এর একটু পর শুরু হবে)
+    tl.fromTo(
+      h1Ref.current,
+      { opacity: 0, y: 40 },
+      { opacity: 1, y: 0, duration: 1, ease: "power3.out" },
+      "-=1",
+    );
+
     tl.fromTo(
       pRef.current,
-      { opacity: 0, y: 30 },
+      { opacity: 0, y: 20 },
       { opacity: 1, y: 0, duration: 1, ease: "power3.out" },
-      "-=0.5", // এটি আগের অ্যানিমেশন শেষ হওয়ার ০.৫ সেকেন্ড আগে শুরু হবে
+      "-=0.6",
     );
   }, []);
 
   return (
-    // overflow-hidden দেওয়া হয়েছে যাতে কোন ইমেজ স্ক্রিনের বাইরে গিয়ে স্ক্রলবার না তৈরি করে
     <div
-      ref={bannerRef}
-      className="h-screen bg-linear-to-r from-[#1E3E85] to-[#336DA6] relative flex items-center justify-center px-4 overflow-hidden"
+      ref={containerRef}
+      className="relative w-full min-h-[600px] md:h-[85vh] bg-[#1E40AF] flex items-center justify-center px-6 overflow-hidden"
+      // CSS Clip-path ব্যবহার করে নিখুঁত নিচের স্মুথ কার্ভ/ওয়েভ তৈরি করা হয়েছে
+      style={{
+        clipPath: "ellipse(140% 100% at 50% 0%)",
+      }}
     >
-      {/* 1. Top Left Ellipse Image */}
-      <div className="absolute top-0 left-0 w-40 sm:w-60 md:w-80 pointer-events-none select-none opacity-50">
-        <img
-          src={img}
-          alt="Top Left Ellipse"
-          className="w-full h-auto rotate-180"
-        />
-        {/* rotate-180 দেওয়া হয়েছে যাতে কোণায় সুন্দরভাবে মিলে যায় */}
+      {/* ----------------- BACKGROUND SHAPES (ইমেজের ভেতরের সার্কেলগুলো) ----------------- */}
+      <div ref={shapesRef} className="absolute inset-0 pointer-events-none z-0">
+        {/* বাম পাশের হালকা নীল ডেকোরেটিভ কার্ভ বল */}
+        <div className="absolute -bottom-10 -left-20 w-72 h-72 rounded-full bg-[#38BDF8]/30 blur-sm"></div>
+
+        {/* মাঝখানের বড় ওভারল্যাপড ডার্ক সার্কেল শেডিং */}
+        <div className="absolute -bottom-32 left-1/3 w-[500px] h-[500px] rounded-full bg-white/5"></div>
       </div>
 
-      {/* 2. Bottom Right Ellipse Image */}
-      <div className="absolute bottom-0 right-0 w-40 sm:w-60 md:w-80 pointer-events-none select-none opacity-50">
-        <img src={img} alt="Bottom Right Ellipse" className="w-full h-auto" />
-      </div>
-
-      {/* Content Area */}
-      <div className="z-40 text-white text-center max-w-5xl md:w-[90%] mx-auto space-y-5">
+      {/* ----------------- MAIN CONTENT AREA ----------------- */}
+      <div className="relative z-10 text-white text-center max-w-4xl mx-auto space-y-6 pt-12 pb-24">
+        {/* Heading */}
         <h1
           ref={h1Ref}
-          className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold opacity-0"
+          className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight text-white opacity-0"
         >
           RemoteRecruit’s Difference
         </h1>
 
+        {/* Paragraph Description */}
         <p
           ref={pRef}
-          className="px-5 text-[16px] sm:text-lg md:text-2xl text-gray-300 opacity-0"
+          className="text-base sm:text-lg md:text-xl text-white/90 font-medium leading-relaxed max-w-3xl mx-auto px-2 opacity-0"
         >
           RemoteRecruit is connecting the world with an easy-to-use platform
           that lets full-time, part-time, and freelance workers showcase their
