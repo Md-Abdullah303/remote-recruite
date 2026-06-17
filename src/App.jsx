@@ -1,5 +1,8 @@
 import "./App.css";
 import BannerSection from "./components/homepage/banner";
+import FeeFreeSection from "./components/homepage/FeeFreeSection";
+import GlobalJobBoard from "./components/homepage/globalJobBoard";
+import ShowcaseTalents from "./components/homepage/ShowcaseTalents";
 import Navbar from "./components/navbar/Navbar";
 
 function App() {
@@ -7,6 +10,9 @@ function App() {
     <div className="">
       <Navbar />
       <BannerSection />
+      <GlobalJobBoard />
+      <FeeFreeSection />
+      <ShowcaseTalents />
     </div>
   );
 }
