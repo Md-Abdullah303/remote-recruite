@@ -3,12 +3,9 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// GSAP প্লাগইন রেজিস্টার করা হলো
 gsap.registerPlugin(ScrollTrigger);
 
-// আপনার ইমেজগুলো এখানে ইম্পোর্ট করুন
 import mainDashboardImg from "../../assets/e7843951ef2e446c079c88628a046de593aca411.png"; // বাম পাশের বড় ড্যাশবোর্ড ছবি
-// import bgHalfCircle from "../../assets/Rectangle 87.png"; // ডান পাশের ব্যাকগ্রাউন্ড হাফ-সার্কেল শেপ
 
 export default function HelpSection() {
   const containerRef = useRef(null);
@@ -17,7 +14,6 @@ export default function HelpSection() {
 
   useGSAP(
     () => {
-      // বাম পাশের বড় ড্যাশবোর্ড ইমেজের অ্যানিমেশন (নিচ থেকে ওপরে স্মুথ রিভিল)
       gsap.fromTo(
         leftMockupRef.current,
         { opacity: 0, y: 80 },
@@ -34,7 +30,6 @@ export default function HelpSection() {
         },
       );
 
-      // ডান পাশের টেক্সট ও বাটনের অ্যানিমেশন (স্ট্যাগার এফেক্ট সহ ডান থেকে বামে আসা)
       gsap.fromTo(
         rightContentRef.current.children,
         { opacity: 0, x: 50 },
@@ -60,7 +55,6 @@ export default function HelpSection() {
       ref={containerRef}
       className="relative w-full max-w-7xl mx-auto my-16 bg-[#EEF2FF]/40 rounded-[40px] font-sans overflow-hidden min-h-[550px] md:min-h-[620px] flex items-center"
     >
-      {/* মূল কন্টেন্ট গ্রিড লেআউট */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full relative z-10 px-6 py-12 md:p-12 lg:p-0">
         {/* Left Column: Big App Dashboard Mockup (Takes 7 Cols on Desktop) */}
         <div
@@ -120,7 +114,6 @@ export default function HelpSection() {
         </div>
       </div>
 
-      {/* অতিরিক্ত ডেকোরেটিভ ফ্লোটিং বল (ইমেজের ভেতরের হলুদ এবং নীল বৃত্তের রিপ্রেজেন্টেশন) */}
       <div className="absolute top-12 left-1/3 w-10 h-10 rounded-full bg-gradient-to-br from-amber-300 to-amber-500 blur-[0.3px] hidden md:block"></div>
       <div className="absolute bottom-12 right-1/3 w-6 h-6 rounded-full bg-gradient-to-tr from-blue-500 to-sky-400 opacity-90 hidden lg:block"></div>
     </div>

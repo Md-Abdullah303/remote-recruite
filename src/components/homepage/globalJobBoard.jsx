@@ -3,11 +3,9 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// GSAP প্লাগইন রেজিস্টার করা হলো
 gsap.registerPlugin(ScrollTrigger);
 
 import backgourndImg from "../../assets/e7843951ef2e446c079c88628a046de593aca411.png";
-// import recruiterImg from "../../assets/81e6760bf2d30fbba3e24c65f7f345497900298d.png";
 import RR from "../../assets/RR.jpg";
 
 export default function GlobalJobBoard() {
@@ -17,7 +15,6 @@ export default function GlobalJobBoard() {
 
   useGSAP(
     () => {
-      // ১. বাম পাশের লেখার জন্য অ্যানিমেশন (Left to Right Fade-in)
       gsap.fromTo(
         leftSideRef.current,
         { opacity: 0, x: -50 },
@@ -28,14 +25,12 @@ export default function GlobalJobBoard() {
           ease: "power2.out",
           scrollTrigger: {
             trigger: containerRef.current,
-            start: "top 80%", // সেকশনের ওপরের অংশ স্ক্রিনের ৮০% এ আসলেই শুরু হবে
+            start: "top 80%",
             toggleActions: "play none none reverse",
           },
         },
       );
 
-      // ২. ডান পাশের ইমেজ এবং ফ্লোটিং কার্ডগুলোর জন্য অ্যানিমেশন (Bottom to Top Reveal)
-      // ডানপাশের কন্টেইনারের ভেতরের সব সরাসরি চাইল্ড ডিলিমেন্টকে একসাথে স্ট্যাগার (একে একে) করে অ্যানিমেট করবে
       gsap.fromTo(
         rightSideRef.current.children,
         { opacity: 0, y: 60 },
@@ -43,7 +38,7 @@ export default function GlobalJobBoard() {
           opacity: 1,
           y: 0,
           duration: 1.2,
-          stagger: 0.2, // একটির পর আরেকটি উপাদান ০.২ সেকেন্ড পর পর আসবে
+          stagger: 0.2,
           ease: "power3.out",
           scrollTrigger: {
             trigger: containerRef.current,

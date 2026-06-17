@@ -2,10 +2,8 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// GSAP প্লাগইন রেজিস্টার করা হলো
 gsap.registerPlugin(ScrollTrigger);
 
-// আপনার মেইন ড্যাশবোর্ড স্ক্রিনশট ইমেজটি এখানে ইম্পোর্ট করুন
 import backgourndImg from "../../assets/e7843951ef2e446c079c88628a046de593aca411.png";
 import { useRef } from "react";
 
@@ -16,7 +14,6 @@ export default function ShowcaseTalents() {
 
   useGSAP(
     () => {
-      // বাম পাশের টেক্সট অ্যানিমেশন (Left to Right)
       gsap.fromTo(
         leftTextRef.current,
         { opacity: 0, x: -60 },
@@ -33,7 +30,6 @@ export default function ShowcaseTalents() {
         },
       );
 
-      // ডান পাশের ইমেজ ও ফ্লোটিং ইলিমেন্টগুলোর অ্যানিমেশন (Bottom to Top Stagger)
       gsap.fromTo(
         rightMockupRef.current.children,
         { opacity: 0, y: 50 },
@@ -54,7 +50,6 @@ export default function ShowcaseTalents() {
     { scope: containerRef },
   );
 
-  // স্কিল ট্যাগের ডাটা অ্যারে
   const skills = [
     { name: "Python Dev", bg: "bg-indigo-50", text: "text-indigo-700" },
     { name: "Javascript", bg: "bg-blue-50", text: "text-blue-700" },

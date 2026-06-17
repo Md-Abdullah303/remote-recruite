@@ -36,21 +36,16 @@ const BannerSection = () => {
     <div
       ref={containerRef}
       className="relative w-full min-h-[600px] md:h-[85vh] bg-[#1E40AF] flex items-center justify-center px-6 overflow-hidden"
-      // CSS Clip-path ব্যবহার করে নিখুঁত নিচের স্মুথ কার্ভ/ওয়েভ তৈরি করা হয়েছে
       style={{
         clipPath: "ellipse(140% 100% at 50% 0%)",
       }}
     >
-      {/* ----------------- BACKGROUND SHAPES (ইমেজের ভেতরের সার্কেলগুলো) ----------------- */}
       <div ref={shapesRef} className="absolute inset-0 pointer-events-none z-0">
-        {/* বাম পাশের হালকা নীল ডেকোরেটিভ কার্ভ বল */}
         <div className="absolute -bottom-10 -left-20 w-72 h-72 rounded-full bg-[#38BDF8]/30 blur-sm"></div>
 
-        {/* মাঝখানের বড় ওভারল্যাপড ডার্ক সার্কেল শেডিং */}
         <div className="absolute -bottom-32 left-1/3 w-[500px] h-[500px] rounded-full bg-white/5"></div>
       </div>
 
-      {/* ----------------- MAIN CONTENT AREA ----------------- */}
       <div className="relative z-10 text-white text-center max-w-4xl mx-auto space-y-6 pt-12 pb-24">
         {/* Heading */}
         <h1

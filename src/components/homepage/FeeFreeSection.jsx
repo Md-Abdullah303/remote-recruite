@@ -3,12 +3,10 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// GSAP প্লাগইন রেজিস্টার করা হলো
 gsap.registerPlugin(ScrollTrigger);
 
-// আপনার ইমেজ পাথগুলো এখানে ইম্পোর্ট করুন
-import RRLogo from "../../assets/RR.jpg"; // অথবা আপনার ফোল্ডারে থাকা লোগো ইমেজ
-import PayPalLogo from "../../assets/payple.png"; // পেপ্যাল লোগো ইমেজ (যদি থাকে, না থাকলে lucide আইকন ব্যবহার করতে পারেন)
+import RRLogo from "../../assets/RR.jpg";
+import PayPalLogo from "../../assets/payple.png";
 import { useRef } from "react";
 
 export default function FeeFreeSection() {
@@ -18,7 +16,6 @@ export default function FeeFreeSection() {
 
   useGSAP(
     () => {
-      // বাম পাশের কার্ড এবং এর ভেতরের এলিমেন্টগুলোর অ্যানিমেশন
       gsap.fromTo(
         leftCardRef.current,
         { opacity: 0, y: 60 },
@@ -35,7 +32,6 @@ export default function FeeFreeSection() {
         },
       );
 
-      // ডান পাশের লেখার অ্যানিমেশন
       gsap.fromTo(
         rightTextRef.current,
         { opacity: 0, y: 40 },
@@ -71,12 +67,10 @@ export default function FeeFreeSection() {
       className="w-full max-w-6xl mx-auto my-16 p-6 md:p-12 bg-white font-sans overflow-hidden"
     >
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-8 items-center flex-col-reverse lg:flex-row">
-        {/* Left Column: Interactive Tier Mockup Card */}
         <div
           ref={leftCardRef}
           className="relative w-full flex justify-center items-center min-h-[460px] md:min-h-[520px]"
         >
-          {/* Main Tier Card */}
           <div className="w-full max-w-[340px] bg-white rounded-[32px] shadow-[0_20px_50px_rgba(0,0,0,0.04)] border border-slate-100 p-8 pt-10 pb-16 space-y-6 relative z-10">
             <div>
               <p className="text-[11px] font-bold text-slate-400 uppercase tracking-widest mb-1">
@@ -119,10 +113,8 @@ export default function FeeFreeSection() {
             </div>
           </div>
 
-          {/* Floating PayPal Upcoming Payment Badge */}
           <div className="absolute bottom-8 -left-4 sm:-left-8 bg-white/95 backdrop-blur-sm rounded-[24px] shadow-[0_15px_35px_rgba(0,0,0,0.06)] border border-slate-100/80 p-3 pl-3 pr-10 flex items-center space-x-4 z-20 max-w-[260px]">
             <div className="w-12 h-12 rounded-[18px] bg-[#EEF2FF] flex items-center justify-center shrink-0">
-              {/* PayPal Icon Placeholder / Image */}
               <img
                 src={
                   PayPalLogo ||
@@ -143,7 +135,6 @@ export default function FeeFreeSection() {
             </div>
           </div>
 
-          {/* Floating RR Logo Badge */}
           <div className="absolute right-4 sm:right-12 top-1/4 z-20 w-16 h-16 sm:w-20 sm:h-20 drop-shadow-[0_10px_20px_rgba(37,99,235,0.15)] transition-transform hover:scale-105 duration-300">
             <img
               src={RRLogo}
@@ -153,11 +144,9 @@ export default function FeeFreeSection() {
             />
           </div>
 
-          {/* Small Background Decorative Circle */}
           <div className="absolute top-12 left-8 w-5 h-5 rounded-full bg-blue-500/80 blur-[0.5px]"></div>
         </div>
 
-        {/* Right Column: Text Content */}
         <div ref={rightTextRef} className="flex flex-col space-y-6 lg:pl-8">
           <div>
             <span className="inline-block bg-[#E0F2FE] text-[#0369A1] text-xs font-bold px-4 py-2 rounded-full shadow-sm border border-[#BAE6FD]">

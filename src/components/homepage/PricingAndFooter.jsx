@@ -5,7 +5,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-// আপনার প্রোজেক্টের অ্যাসেট ফাইলগুলো এখানে সঠিকভাবে বসিয়ে নিন
 import RRLogo from "../../assets/RR.jpg";
 
 export default function PricingAndFooter() {
@@ -15,7 +14,6 @@ export default function PricingAndFooter() {
 
   useGSAP(
     () => {
-      // প্রাইজ কার্ড দুটির স্ক্রোল অ্যানিমেশন
       gsap.fromTo(
         cardsRef.current.children,
         { opacity: 0, y: 70, scale: 0.95 },
@@ -34,7 +32,6 @@ export default function PricingAndFooter() {
         },
       );
 
-      // ফুটারের টেক্সট এবং সোশ্যাল লিংক অ্যানিমেশন
       gsap.fromTo(
         footerRef.current.children,
         { opacity: 0, y: 30 },
@@ -60,7 +57,6 @@ export default function PricingAndFooter() {
       ref={containerRef}
       className="w-full bg-white pt-12 font-sans relative overflow-hidden"
     >
-      {/* ----------------- PRICING SECTION ----------------- */}
       <div className="max-w-6xl mx-auto px-6 md:px-12 relative z-20 pb-16">
         {/* Section Title */}
         <div className="text-center mb-16">
@@ -199,7 +195,6 @@ export default function PricingAndFooter() {
         </div>
       </div>
 
-      {/* ----------------- DESIGN FOOTER WITH WAVE ----------------- */}
       <div
         className="relative w-full bg-[#1E40AF] pt-32 pb-12 mt-[-60px] z-10"
         style={{ clipPath: "polygon(0 15%, 100% 0, 100% 100%, 0 100%)" }}
@@ -272,7 +267,6 @@ export default function PricingAndFooter() {
             </div>
           </div>
 
-          {/* Bottom Row: Micro Double-R Icon Centered */}
           <div className="flex justify-center items-center pt-2">
             <div className="w-10 h-10 transition-transform hover:scale-110 duration-300">
               <img

@@ -13,7 +13,6 @@ export default function CommonQuestions() {
 
   useGSAP(
     () => {
-      // হেডিং অ্যানিমেশন
       gsap.fromTo(
         headingRef.current,
         { opacity: 0, y: -20 },
@@ -30,7 +29,6 @@ export default function CommonQuestions() {
         },
       );
 
-      // প্রতিটি প্রশ্ন এবং উত্তর একে একে নিচ থেকে আসবে (Staggered Animation)
       gsap.fromTo(
         questionsRef.current.children,
         { opacity: 0, y: 30 },
@@ -48,7 +46,6 @@ export default function CommonQuestions() {
         },
       );
 
-      // বাটনের অ্যানিমেশন
       gsap.fromTo(
         buttonRef.current,
         { opacity: 0, scale: 0.9 },
