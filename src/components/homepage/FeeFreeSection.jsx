@@ -129,6 +129,7 @@ export default function FeeFreeSection() {
                   "https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg"
                 }
                 alt="PayPal"
+                loading="lazy"
                 className="w-5 h-5 object-contain"
               />
             </div>
@@ -146,6 +147,7 @@ export default function FeeFreeSection() {
           <div className="absolute right-4 sm:right-12 top-1/4 z-20 w-16 h-16 sm:w-20 sm:h-20 drop-shadow-[0_10px_20px_rgba(37,99,235,0.15)] transition-transform hover:scale-105 duration-300">
             <img
               src={RRLogo}
+              loading="lazy"
               alt="RemoteRecruit Badge"
               className="w-full h-full object-contain"
             />

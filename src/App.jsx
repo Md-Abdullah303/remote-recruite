@@ -18,7 +18,7 @@ function App() {
       <ShowcaseTalents />
       <HelpSection />
       <CommonQuestions />
-      L<PricingAndFooter />
+      <PricingAndFooter />
     </div>
   );
 }

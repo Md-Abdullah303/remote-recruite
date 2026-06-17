@@ -91,6 +91,7 @@ export default function GlobalJobBoard() {
           <div className="w-full h-full max-w-[500px]">
             <img
               src={backgourndImg}
+              loading="lazy"
               alt="Dashboard Mockup"
               className="w-full h-auto object-contain rounded-2xl drop-shadow-xl"
             />
@@ -100,6 +101,7 @@ export default function GlobalJobBoard() {
           <div className="absolute bottom-34 left-2 sm:-left-6 bg-white/95 backdrop-blur-sm rounded-full shadow-lg border border-slate-100/80 p-2 pl-2 pr-8 flex items-center space-x-3 transition-transform hover:scale-105 duration-300 max-w-[240px]">
             <div className="relative w-10 h-10 rounded-full overflow-hidden border-2 border-amber-400 bg-slate-200 shrink-0">
               <img
+                loading="lazy"
                 src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=100&q=80"
                 alt="Felonious Gru"
                 className="w-full h-full object-cover"
@@ -119,6 +121,7 @@ export default function GlobalJobBoard() {
           <div className="absolute bottom-5 right-4 sm:right-8 bg-white/95 backdrop-blur-sm rounded-full shadow-lg border border-slate-100/80 p-2 pl-2 pr-8 flex items-center space-x-3 transition-transform hover:scale-105 duration-300 max-w-[240px]">
             <div className="relative w-10 h-10 rounded-full overflow-hidden border-2 border-amber-400 bg-slate-200 shrink-0">
               <img
+                loading="lazy"
                 src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=100&q=80"
                 alt="Mel Muselphiem"
                 className="w-full h-full object-cover"
@@ -138,6 +141,7 @@ export default function GlobalJobBoard() {
           <div className="absolute right-5 top-[30%] -translate-y-1/2 w-14 h-14 sm:w-16 sm:h-16 drop-shadow-md transition-transform hover:rotate-6 duration-300">
             <img
               src={RR}
+              loading="lazy"
               alt="RemoteRecruit Logo"
               className="w-full h-full object-contain"
             />

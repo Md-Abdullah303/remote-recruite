@@ -98,6 +98,7 @@ export default function ShowcaseTalents() {
           <div className="w-full h-full max-w-[480px]">
             <img
               src={backgourndImg}
+              loading="lazy"
               alt="Profile Showcase Mockup"
               className="w-full h-auto object-contain rounded-3xl drop-shadow-2xl border border-slate-100"
             />
@@ -107,6 +108,7 @@ export default function ShowcaseTalents() {
           <div className="absolute top-[35%] -right-2 sm:-right-6 w-24 h-24 sm:w-28 sm:h-28 rounded-full border-[6px] border-white shadow-xl overflow-hidden z-20 transition-transform hover:scale-105 duration-300">
             <img
               src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80"
+              loading="lazy"
               alt="Recruiter Professional Profile"
               className="w-full h-full object-cover"
             />
@@ -118,6 +120,7 @@ export default function ShowcaseTalents() {
             <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-amber-400 bg-slate-100 shrink-0">
               <img
                 src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&q=80"
+                loading="lazy"
                 alt="Client Feedback Owner"
                 className="w-full h-full object-cover"
               />

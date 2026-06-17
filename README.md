@@ -1,16 +1,49 @@
-# React + Vite
+# 🚀 RemoteRecruit – Home Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### 📖 Project Description
 
-Currently, two official plugins are available:
+Recreate the RemoteRecruit - Features/Home page based on the provided Figma design for both desktop, tablet, and mobile views using modern frontend technologies and best practices. The project includes smooth scroll animations, optimized image rendering, and full responsiveness across all screen sizes.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+### 🔗 Live Deployment
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **LIVE LINK:** [remote-recruit-gamma.vercel.app](https://remote-recruit-gamma.vercel.app)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 🛠️ Technologies Used
+
+- **React.js (v19)** ⚛️
+- **Vite** ⚡ (Build Tool)
+- **JavaScript (ES6+)** 🟨
+- **Tailwind CSS (v4)** 🎨
+
+---
+
+### 📦 Libraries & Packages
+
+- **GSAP (`gsap`)** 🚀 (Core Animation Suite)
+- **@gsap/react** 🔄 (GSAP Hooks for React Architecture)
+- **Lucide React (`lucide-react`)** 🧰 (Modern & Clean Icon Pack)
+
+---
+
+### ✨ Key Features Implemented
+
+- **Figma Fidelity:** Layout, spacing, typography, and exact color palettes matched carefully.
+- **ScrollTrigger Animations:** Section reveals and staggered element entries fade in dynamically as the user scrolls.
+- **Interactive Hover States:** Smooth transitions, micro-interactions, and scaling effects on all buttons and cards.
+- **Optimization:** Implemented image lazy-loading (`loading="lazy"`) and semantic HTML tags for high Lighthouse accessibility & performance metrics.
+- **Scroll-to-Top:** Seamless native-like UX functionality to bring users back to the header instantly.
+
+---
+
+### 💻 Local Setup & Installation
+
+Follow these quick steps to run the project locally on your machine:
+
+1. **Clone the Repository:**
+   ```bash
+   git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
+   ```

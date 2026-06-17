@@ -29,7 +29,12 @@ const Navbar = () => {
       >
         {/* Logo Container */}
         <div className="flex items-center">
-          <img src={logo} alt="logo" className="h-8 w-auto object-contain" />
+          <img
+            loading="lazy"
+            src={logo}
+            alt="logo"
+            className="h-8 w-auto object-contain"
+          />
         </div>
 
         {/* Buttons Container */}

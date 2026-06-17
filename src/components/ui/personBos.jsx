@@ -5,6 +5,7 @@ const PersonBox = ({ name, des }) => {
   return (
     <div className="px-4 py-2 shadow rounded-xl bg-white flex items-center gap-2 ">
       <img
+        loading="lazy"
         src={personImg}
         alt="personImg"
         className="w-15 border-2 border-yellow-600 h-15 rounded-full"

@@ -60,15 +60,6 @@ export default function HelpSection() {
       ref={containerRef}
       className="relative w-full max-w-7xl mx-auto my-16 bg-[#EEF2FF]/40 rounded-[40px] font-sans overflow-hidden min-h-[550px] md:min-h-[620px] flex items-center"
     >
-      {/* ১. ডান পাশের ব্যাকগ্রাউন্ড হাফ-সার্কেল ইমেজ লেয়ার */}
-      {/* <div className="absolute top-0 right-0 h-full w-1/2 pointer-events-none z-0 hidden lg:block opacity-80">
-        <img
-          src={bgHalfCircle}
-          alt="Background Circle Asset"
-          className="w-full h-full object-cover object-right"
-        />
-      </div> */}
-
       {/* মূল কন্টেন্ট গ্রিড লেআউট */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full relative z-10 px-6 py-12 md:p-12 lg:p-0">
         {/* Left Column: Big App Dashboard Mockup (Takes 7 Cols on Desktop) */}
@@ -78,6 +69,7 @@ export default function HelpSection() {
         >
           <img
             src={mainDashboardImg}
+            loading="lazy"
             alt="Main Application Dashboard Screenshot"
             className="w-full h-auto object-contain drop-shadow-[0_25px_60px_rgba(0,0,0,0.06)] rounded-r-3xl md:rounded-r-[32px]"
           />

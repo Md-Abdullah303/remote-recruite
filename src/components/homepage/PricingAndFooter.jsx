@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -277,6 +277,7 @@ export default function PricingAndFooter() {
             <div className="w-10 h-10 transition-transform hover:scale-110 duration-300">
               <img
                 src={RRLogo}
+                loading="lazy"
                 alt="RemoteRecruit Mini Icon"
                 className="w-full h-full object-contain brightness-0 invert opacity-60"
               />
